@@ -221,7 +221,7 @@ ul
 {
 	width: 44px;
 	height: 51px;
-	background-image: url(../img/amigo_explosao.png);
+	background-image: url(../img/amigo_morte.png);
 	animation: play3 .5s steps(7) infinite;
 	-webkit-animation: play3 .5s steps(7) infinite;
 	-moz-animation: play3 .5s steps(7) infinite;
@@ -283,4 +283,3 @@ h2
 	left: 750px;
 	top: 7px;	
 }
-
