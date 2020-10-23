@@ -148,7 +148,6 @@ ul
     -o-animation: play .5s steps(2) infinite; 
 }
 
-
 .anima3 
 {
 	background-image:url(../imgs/amigo.png);
@@ -167,24 +166,24 @@ ul
 
 @-webkit-keyframes play2 
 {
-   from { background-position:    0px; }
+   from { background-position: 0px; }
    to { background-position: -528px; }
 }
 
 @-moz-keyframes play2 
 {
-   from { background-position:    0px; }
+   from { background-position: 0px; }
    to { background-position: -528px; }
 }
 
 @-ms-keyframes play2 
 {
-   from { background-position:    0px; }
+   from { background-position: 0px; }
    to { background-position: -528px; }
 }
 
 @-o-keyframes play2 
 {
-   from { background-position:    0px; }
+   from { background-position: 0px; }
    to { background-position: -528px; }
 }
