@@ -8,7 +8,8 @@ h1
 {
 	font-family: Titulo;
 	font-size: 40px;
-	color: #603A03;
+    color: #603A03;
+    text-align: center;
 }
 
 body 
@@ -78,25 +79,33 @@ body
 
 #inicio 
 {
-	width: 350px;
-	height: 200px;
+	width: 300px;
+	height: 220px;
 	background-color: #FFF;
  	margin-left: auto;
     margin-right: auto;
  	margin-top: 100px;
-	text-align: center;
-	padding: 10px;
+    padding: 10px;
+}
+
+p
+{
+    text-align: center;
+}
+
+ul 
+{
+    list-style: none;
 }
 
 .anima1 
 {
 	background-image: url(../imgs/helicoptero.png);
-	animation: play .5s steps(2) infinite;
-
-       -webkit-animation: play .5s steps(2) infinite;
-       -moz-animation: play .5s steps(2) infinite;
-       -ms-animation: play .5s steps(2) infinite;
-       -o-animation: play .5s steps(2) infinite;
+    animation: play .5s steps(2) infinite;
+    -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+    -o-animation: play .5s steps(2) infinite;
 }
 
 @keyframes play 
@@ -152,8 +161,8 @@ body
 
 @keyframes play2 
 {
-	from {background-position:0px;}
-	to {background-position:-528px;}
+	from { background-position: 0px; }
+	to { background-position: -528px; }
 }
 
 @-webkit-keyframes play2 
