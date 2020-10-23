@@ -30,7 +30,7 @@ function start()
         jogo.pressionou[e.which] = false;
     });
 	
-	//Game Loop
+	// Game Loop
 	jogo.timer = setInterval(loop,30);
 
 	function loop() {
@@ -38,8 +38,7 @@ function start()
         moveJogador();
 	}
 
-    //Função que movimenta o fundo do jogo
-	
+    // Função que movimenta o fundo do jogo
 	function moveFundo() {
 	    let esquerda = parseInt($("#fundoGame").css("background-position")); // parseInt - Converte uma String em um Inteiro.
 	    $("#fundoGame").css("background-position", esquerda-1);
@@ -47,15 +46,23 @@ function start()
     
     function moveJogador() {
 	
-        if (jogo.pressionou[TECLA.W]) {
+        if (jogo.pressionou[TECLA.W]) 
+        {
             let topo = parseInt($("#jogador").css("top"));
             $("#jogador").css("top", topo - 10);
-        
+                if (topo<=0) 
+                {
+                    $("#jogador").css("top", topo + 10);
+                }
         }
         
         if (jogo.pressionou[TECLA.S]) {
             let topo = parseInt($("#jogador").css("top"));
-            $("#jogador").css("top",topo + 10);	
+            $("#jogador").css("top",topo + 10);
+            
+            if (topo >= 434) {	
+                $("#jogador").css("top",topo-10);
+            }
         }
         
         if (jogo.pressionou[TECLA.P]) {
