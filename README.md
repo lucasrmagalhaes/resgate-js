@@ -1,1 +1,1 @@
-# nave-js
+# resgate-js
