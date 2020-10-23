@@ -413,7 +413,38 @@ function start()
         if (energiaAtual == 0) 
         {    
             $("#energia").css("background-image", "url(img/energia0.png)");   
+            
             // Game Over
+            gameOver()
         }
-    } // Fim da função energia
-}
+    } // Fim energia
+
+    // Game Over
+    function gameOver() 
+    {
+        fimDeJogo = true;
+        musica.pause();
+        somGameover.play();
+        
+        window.clearInterval(jogo.timer);
+        jogo.timer = null;
+        
+        $("#jogador").remove();
+        $("#inimigo1").remove();
+        $("#inimigo2").remove();
+        $("#amigo").remove();
+        
+        $("#fundoGame").append("<div id='fim'></div>");
+        
+        $("#fim").html("<h1> Game Over </h1><p>Pontuação: " + pontos + "</p>" + 
+        "<div id='reinicia' onClick=reiniciaJogo()><h3>Jogar Novamente</h3></div>");
+    } // Fim gameOver
+} // Fim start
+
+// Reiniciar o Jogo
+function reiniciaJogo() 
+{
+    somGameover.pause();
+    $("#fim").remove();
+    start();
+} // Fim reiniciaJogo
