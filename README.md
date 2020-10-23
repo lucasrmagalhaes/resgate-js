@@ -1,6 +1,6 @@
 #  RESGATE GAME  :helicopter:
 
-  Jogo Resgate desenvolvido em JS, HTML e CSS com o framework JQuery.
+  Jogo Resgate desenvolvido em JS, HTML e CSS com os frameworks JQuery e Jquery Collision.
 
 [![RESGATE](https://i.imgur.com/BS3YReH.jpg)](https://resgate.netlify.app/)
 
