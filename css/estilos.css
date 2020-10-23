@@ -187,3 +187,11 @@ ul
    from { background-position: 0px; }
    to { background-position: -528px; }
 }
+
+#disparo 
+{
+	width: 50px;
+	height: 8px;
+	position: absolute;
+	background-image: url(../imgs/disparo.png);
+}
