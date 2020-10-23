@@ -14,7 +14,7 @@ h1
 
 body 
 {
-	background-image: url(../imgs/fundo.jpg);
+	background-image: url(../img/fundo.jpg);
 }
 
 
@@ -32,7 +32,7 @@ body
 {
 	width: 950px;
 	height: 630px;
-	background-image: url(../imgs/fundo_game.jpg);
+	background-image: url(../img/fundo_game.jpg);
 	border-color: #FFF;
 	border-style: solid;
 }
@@ -44,7 +44,7 @@ body
 	position: absolute;
 	left: 8px;
 	top: 179px;
-    background-image: url(../imgs/apache.png);
+    background-image: url(../img/apache.png);
 }
 
 #inimigo1 
@@ -54,7 +54,7 @@ body
 	position: absolute;
 	left: 689px;
 	top: 253px;
-	background-image: url(../imgs/inimigo1.png);
+	background-image: url(../img/inimigo1.png);
 }
 
 #inimigo2 
@@ -64,7 +64,7 @@ body
 	position: absolute;
 	left: 775px;
 	top: 447px;
-	background-image: url(../imgs/inimigo2.png);
+	background-image: url(../img/inimigo2.png);
 }
 
 #amigo 
@@ -74,7 +74,7 @@ body
 	position: absolute;
 	left: 10px;
 	top: 464px;
-	background-image: url(../imgs/amigo.png);
+	background-image: url(../img/amigo.png);
 }
 
 #inicio 
@@ -100,7 +100,7 @@ ul
 
 .anima1 
 {
-	background-image: url(../imgs/helicoptero.png);
+	background-image: url(../img/helicoptero.png);
     animation: play .5s steps(2) infinite;
     -webkit-animation: play .5s steps(2) infinite;
     -moz-animation: play .5s steps(2) infinite;
@@ -140,7 +140,7 @@ ul
 
  .anima2 
  {
-    background-image:url(../imgs/inimigo1.png);
+    background-image:url(../img/inimigo1.png);
     animation: play .5s steps(2) infinite;
     -webkit-animation: play .5s steps(2) infinite;
     -moz-animation: play .5s steps(2) infinite;
@@ -150,7 +150,7 @@ ul
 
 .anima3 
 {
-	background-image:url(../imgs/amigo.png);
+	background-image:url(../img/amigo.png);
 	animation:play2 .9s steps(12) infinite;
     -webkit-animation: play2 .9s steps(12) infinite;
     -moz-animation: play2 .9s steps(12) infinite;
@@ -193,7 +193,7 @@ ul
 	width: 50px;
 	height: 8px;
 	position: absolute;
-	background-image: url(../imgs/disparo.png);
+	background-image: url(../img/disparo.png);
 }
 
 #explosao1 
@@ -221,7 +221,7 @@ ul
 {
 	width: 44px;
 	height: 51px;
-	background-image: url(../imgs/amigo_explosao.png);
+	background-image: url(../img/amigo_explosao.png);
 	animation: play3 .5s steps(7) infinite;
 	-webkit-animation: play3 .5s steps(7) infinite;
 	-moz-animation: play3 .5s steps(7) infinite;
@@ -274,3 +274,13 @@ h2
 	font-size: 20px;
 	color: #FFF
 }
+
+#energia 
+{
+	width: 140px;
+	height: 38px;
+	position: absolute;
+	left: 750px;
+	top: 7px;	
+}
+

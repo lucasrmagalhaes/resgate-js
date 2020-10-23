@@ -7,6 +7,7 @@ function start()
 	$("#fundoGame").append("<div id='inimigo2'></div>");
     $("#fundoGame").append("<div id='amigo' class='anima3'></div>");
     $("#fundoGame").append("<div id='placar'></div>");
+    $("#fundoGame").append("<div id='energia'></div>");
     
     // Principais variáveis do jogo.
     var velocidade = 5
@@ -16,6 +17,9 @@ function start()
     var pontos = 0;
     var salvos = 0;
     var perdidos = 0;
+
+    // Energia
+    var energiaAtual = 3;
 
     var jogo = {}
     var fimDeJogo = false
@@ -52,6 +56,7 @@ function start()
         moveAmigo();
         colisao();
         placar();
+        energia();
 	} // Fim da Função Loop
 
     // Função que movimenta o fundo do jogo
@@ -173,9 +178,12 @@ function start()
         
         // Jogador com o inimigo 1
         if (colisao1.length > 0) 
-        {    
-            var inimigo1X = parseInt($("#inimigo1").css("left"));
-            var inimigo1Y = parseInt($("#inimigo1").css("top"));
+        { 
+            
+            energiaAtual--;   
+            
+            let inimigo1X = parseInt($("#inimigo1").css("left"));
+            let inimigo1Y = parseInt($("#inimigo1").css("top"));
             
             explosao1(inimigo1X,inimigo1Y);
         
@@ -188,8 +196,11 @@ function start()
         // Jogador com o inimigo 2 
         if (colisao2.length>0) 
         {
-            var inimigo2X = parseInt($("#inimigo2").css("left"));
-            var inimigo2Y = parseInt($("#inimigo2").css("top"));
+            
+            energiaAtual--;
+
+            let inimigo2X = parseInt($("#inimigo2").css("left"));
+            let inimigo2Y = parseInt($("#inimigo2").css("top"));
         
             explosao2(inimigo2X, inimigo2Y);
                 
@@ -203,8 +214,8 @@ function start()
         {	
             pontos += 100;
 
-            var inimigo1X = parseInt($("#inimigo1").css("left"));
-            var inimigo1Y = parseInt($("#inimigo1").css("top"));
+            let inimigo1X = parseInt($("#inimigo1").css("left"));
+            let inimigo1Y = parseInt($("#inimigo1").css("top"));
                 
             explosao1(inimigo1X,inimigo1Y);
             $("#disparo").css("left", 950);
@@ -219,8 +230,8 @@ function start()
         {
             pontos += 50;
             
-            var inimigo2X = parseInt($("#inimigo2").css("left"));
-            var inimigo2Y = parseInt($("#inimigo2").css("top"));
+            let inimigo2X = parseInt($("#inimigo2").css("left"));
+            let inimigo2Y = parseInt($("#inimigo2").css("top"));
             $("#inimigo2").remove();
         
             explosao2(inimigo2X,inimigo2Y);
@@ -257,7 +268,7 @@ function start()
     function explosao1(inimigo1X, inimigo1Y) 
     {
         $("#fundoGame").append("<div id='explosao1'></div");
-        $("#explosao1").css("background-image", "url(imgs/explosao.png)");
+        $("#explosao1").css("background-image", "url(img/explosao.png)");
         
         var div = $("#explosao1");
         
@@ -297,7 +308,7 @@ function start()
     function explosao2(inimigo2X, inimigo2Y)
     {
         $("#fundoGame").append("<div id='explosao2'></div");
-        $("#explosao2").css("background-image", "url(imgs/explosao.png)");
+        $("#explosao2").css("background-image", "url(img/explosao.png)");
     
         var div2=$("#explosao2");
     
@@ -321,14 +332,14 @@ function start()
         $("#fundoGame").append("<div id='explosao3' class='anima4'></div");
         $("#explosao3").css("top", amigoY);
         $("#explosao3").css("left", amigoX);
-        
+    
         var tempoExplosao3 = window.setInterval(resetaExplosao3, 1000);
         
         function resetaExplosao3() 
         {
             $("#explosao3").remove();
             window.clearInterval(tempoExplosao3);
-            tempoExplosao3 = null;    
+            tempoExplosao3 = null;   
         }    
     } // Fim explosao3
 
@@ -353,4 +364,29 @@ function start()
     {
         $("#placar").html("<h2> Pontos: " + pontos + " Salvos: " + salvos + " Perdidos: " + perdidos + "</h2>");
     } // Fim da Função placar
+
+    // Energia
+    function energia() 
+    {
+        if (energiaAtual == 3) 
+        {
+            $("#energia").css("background-image", "url(img/energia3.png)");
+        }
+
+        if (energiaAtual == 2) 
+        {
+            $("#energia").css("background-image", "url(img/energia2.png)");
+        }
+
+        if (energiaAtual == 1) 
+        {    
+            $("#energia").css("background-image", "url(img/energia1.png)");
+        }
+
+        if (energiaAtual == 0) 
+        {    
+            $("#energia").css("background-image", "url(img/energia0.png)");   
+            // Game Over
+        }
+    } // Fim da função energia
 }
