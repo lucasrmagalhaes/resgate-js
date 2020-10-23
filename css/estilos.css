@@ -1,0 +1,89 @@
+@font-face 
+{
+	font-family: Titulo;
+	src: url(../fontes/ANODETONOONE.TTF);
+}
+
+h1 
+{
+	font-family: Titulo;
+	font-size: 40px;
+	color: #603A03;
+}
+
+body 
+{
+	background-image: url(../imgs/fundo.jpg);
+}
+
+
+#container 
+{
+	width: 950px;
+	height: auto;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#fundoGame 
+{
+	width: 950px;
+	height: 630px;
+	background-image: url(../imgs/fundo_game.jpg);
+	border-color: #FFF;
+	border-style: solid;
+}
+
+#jogador 
+{
+	width: 256px;
+	height: 66px;
+	position: absolute;
+	left: 8px;
+	top: 179px;
+    background-image: url(../imgs/apache.png);
+}
+
+#inimigo1 
+{
+	width: 256px;
+	height: 66px;
+	position: absolute;
+	left: 689px;
+	top: 253px;
+	background-image: url(../imgs/inimigo1.png);
+}
+
+#inimigo2 
+{
+	width: 165px;
+	height: 70px;
+	position: absolute;
+	left: 775px;
+	top: 447px;
+	background-image: url(../imgs/inimigo2.png);
+}
+
+#amigo 
+{
+	width: 44px;
+	height: 51px;
+	position: absolute;
+	left: 10px;
+	top: 464px;
+	background-image: url(../imgs/amigo.png);
+}
+
+#inicio 
+{
+	width: 350px;
+	height: 200px;
+	background-color: #FFF;
+ 	margin-left: auto;
+    margin-right: auto;
+ 	margin-top: 100px;
+	text-align: center;
+	padding: 10px;
+}
